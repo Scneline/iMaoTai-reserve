@@ -27,7 +27,7 @@ sections = config.sections()
 
 def get_location():
     while 1:
-        location = input(f"请输入精确小区位置，例如[小区名称]，为你自动预约附近的门店:").strip()
+        location = input(f"滨湖沁园").strip()
         selects = process.select_geo(location)
 
         a = 0
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         city = location_select['city']
         location: str = location_select['location']
 
-        mobile = input("输入手机号[13812341234]:").strip()
+        mobile = input("输入手机号[17682161686]:").strip()
         process.get_vcode(mobile)
         code = input(f"输入 [{mobile}] 验证码[1234]:").strip()
         token, userId = process.login(mobile, code)
